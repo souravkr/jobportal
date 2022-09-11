@@ -12,12 +12,34 @@
 		<hibernate.version>5.4.1.Final</hibernate.version>
 		<mysql.connector.version>5.1.45</mysql.connector.version>
 		<c3po.version>0.9.5.2</c3po.version>
-
+      <springsecurity.version>5.7.3</springsecurity.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
+	
+		<dependency>
+	   <groupId>org.springframework.security</groupId>
+	   <artifactId>spring-security-config</artifactId>
+	   <version>${springsecurity.version}</version>
+    </dependency>
+
+<dependency>
+  <groupId>org.springframework.security</groupId>
+  <artifactId>spring-security-web</artifactId>
+  <version>${springsecurity.version}</version>
+</dependency>
+
+<!-- jsp tag by spring security  --> 
+<dependency>
+  <groupId>org.springframework.security</groupId>
+  <artifactId>spring-security-taglibs</artifactId>
+  <version>5.7.3</version>
+</dependency>
+
+   
+	
 
 		<!-- Spring -->
 		<dependency>
@@ -84,7 +106,8 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
+		
+	
 
 		<!-- to compensate for java 9 not including jaxb -->
 		<dependency>
